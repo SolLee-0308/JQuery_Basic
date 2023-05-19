@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인접 관계 선택자 | 형(이전)/동생(다음) 요소 선택자</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <!-- 1. 제이쿼리 코어 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+    <!-- 2. 제이쿼리 CDN 방식이용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+        // 1. $("요소 선택").prev()
+        //      : 선택한 요소를 기준으로 이전에 오는 형제 요소만 선택
+        // 2. $("요소 선택").next()
+        //      : 선택한 요소를 기준으로 다음에 오는 형제 요소만 선택
+        // 3. $("요소 선택 1 + 요소 선택 2")
+        //      : 선택한 요소를(요소 선택 1) 기준으로 바로 다음에 오는 선택한 요소(요소 선택 2)만 선택
+
+        $(function(){
+
+            // 스타일을 만든 후
+            var style_1 = {
+                "background-color":"#0ff",
+                "border":"2px solid #f00"
+            }
+            var style_2 = {
+                "background-color":"#ff0",
+                "border":"2px dashed #f00"
+            }
+
+            
+            // 만든 스타일 적용
+            $(".txt").prev().css(style_1);
+            $(".txt + p").css(style_2);
+            $(".txt").next().next().css(style_2);
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+        <p>내용1</p>
+        <p class="txt">내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+    </div>
+</body>
+</html>
