@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐색 선택자 | only-child/slice(index) 선택자</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <!-- 1. 제이쿼리 코어 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+    <!-- 2. 제이쿼리 CDN 방식이용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+        // 1. $("요소 선택 : only-child")
+        //      : 선택한 요소가 부모 요소에게 하나뿐인 자식 요소면 선택
+        // 2. $("요소 선택").slice(start index, end index)
+        //      : 지정 구간 인덱스의 요소를 선택
+
+        $(function(){
+            $("li:only-child").css({'backgroundColor':'purple'});
+            $("#menu1 li").slice(1,3).css({'backgroundColor':'pink'});
+        });
+
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용 1-1</li>
+        <li>내용 1-2</li>
+        <li>내용 1-3</li>
+        <li>내용 1-4</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용 2-1</li>
+    </ul>
+</body>
+</html>

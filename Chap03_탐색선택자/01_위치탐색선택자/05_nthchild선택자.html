@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐색 선택자 | nth-child 선택자</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <!-- 1. 제이쿼리 코어 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+    <!-- 2. 제이쿼리 CDN 방식이용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+        // 1. $("요소 선택 : nth-child(숫자)")
+        //      : 선택한 요소 중 지정한 숫자에 위치한 요소 선택
+        // 2. $("요소 선택 : nth-child(숫자n)")
+        //      : 선택한 요소 중 지정한 배수에 위치한 요소 선택
+        // 3. $("요소 선택 : nth-last-child(숫자)")
+        //      : 선택한 요소 중 마지막 위치에서 지정한 숫자에 위치한 요소 선택
+
+        $(function(){
+            $("#menu1 li:nth-child(1)").css({'backgroundColor':'#ff0'});
+            $("#menu1 li:nth-child(2n)").css({'border':'2px dashed #f00'});
+            $("#menu2 li:nth-last-child(2)").css({'backgroundColor':'#0ff'});
+        });
+
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용 1-1</li>
+        <li>내용 1-2</li>
+        <li>내용 1-3</li>
+        <li>내용 1-4</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용 2-1</li>
+        <li>내용 2-2</li>
+        <li>내용 2-3</li>
+    </ul>
+</body>
+</html>
