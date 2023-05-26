@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index()메서드</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    
+    <!-- 1. 제이쿼리 코어 파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+
+    <!-- 2. 제이쿼리 CDN 방식이용 -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+
+        // $("요소 선택").index("지정 요소 선택");
+        // 지정 선택 요소를 찾아서 인덱스 값을 반환
+
+        $(function(){
+            var idxNum = $("li").index($("#list3"));
+            console.log(idxNum); // 2
+        });
+    </script>
+
+</head>
+<body>
+    <h1>배열 관련 함수</h1>
+
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li id="list3">내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>
